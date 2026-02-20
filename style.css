@@ -6,9 +6,13 @@
 
 body{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: aliceblue;
   color: #444;
+}
 
+body>header{
+  position: sticky;
+  top: 0px;
+  left: 0px;
 }
 
 body header hgroup{
@@ -16,6 +20,7 @@ body header hgroup{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: aliceblue;
   padding: 2em;
 }
 
@@ -30,7 +35,7 @@ nav{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: #333;
 }
 
 nav ul{
@@ -43,7 +48,7 @@ nav ul{
 nav ul li a{
   padding: 0.3em;
   text-decoration: none;
-  color: white;
+  color: rgba(255, 255, 255, 0.9);
   font-size: 20px;
   font-weight: 600;
   cursor: pointer;
@@ -81,10 +86,9 @@ article h3{
   font-size: 30px;
 }
 
-article p,section data{
-  font-size: 24px;
-  margin: 3px 0px;
-  line-height: 1.4em;
+article p{
+  color: #555;
+  font-size: 22px;
 }
 
 article header p{
@@ -103,8 +107,8 @@ section figure img{
 }
 
 section figure figcaption{
-  padding: 10px;
-  font-size: 20px;
+  padding: 0.6em;
+  font-size: 22px;
   text-align: center;
   background-color: black;
   color: white;
@@ -112,18 +116,18 @@ section figure figcaption{
 
 details{
   width: 50%;
-  font-size: 24px;
+  padding: 0.5em;
   border: 1px solid rgba(0, 0, 0, 0.443);
+  height: fit-content;
 }
 
-details summary{
-  padding: 10px;
-  /* background-color: rgba(0, 0, 0, 0.03); */
+ details summary{
+  font-size: 22px;
   cursor: pointer;
 }
 
 details p{
-  padding: 10px;
+  margin-top: 10px;
 }
 
 article section:nth-last-child(2){
@@ -134,9 +138,45 @@ article section:nth-last-child(2){
 
 
 article aside{
-  padding: 5px 20px;
+  padding: 0.3em 1em;
+  border-left: 2px solid #29627e;
+  color: #29627e;
+
+}
+
+article aside p{
   font-style: italic;
   cursor: pointer;
-  color: #29627e;
-  border-left: 2px solid #29627e;
+  text-decoration: underline;
+}
+
+body>footer section:first-child{
+  padding: 2em 0em;
+  background-color: #333;
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  font-size: 18px;
+  justify-content: space-evenly;
+}
+
+footer address{
+  font-style: normal;
+  line-height: 1.4em;
+}
+
+footer dialog{
+  position: relative;
+  background:none;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 1em;
+}
+
+footer section:last-child{
+  padding: 1em 0em;
+  background-color: black;
+  font-size: 20px;
+  color: white;
+  text-align: center;
 }
